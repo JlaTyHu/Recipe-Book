@@ -1,8 +1,8 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpErrorResponse} from "@angular/common/http";
-import {BehaviorSubject, catchError, Subject, tap, throwError} from "rxjs";
-import {User} from "./user.model";
-import {Router} from "@angular/router";
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import { BehaviorSubject, catchError, tap, throwError } from "rxjs";
+import { Router } from "@angular/router";
+import { User } from "./user.model";
 
 export interface AuthResponseData {
   idToken: string,
@@ -20,8 +20,7 @@ export class AuthService {
   private tokenExpirationTimer: any;
 
   constructor(private http: HttpClient,
-              private router: Router) {
-  }
+              private router: Router) {}
 
   signup(email: string, password: string) {
     return this.http.post<AuthResponseData>(
@@ -101,7 +100,9 @@ export class AuthService {
     }, expirationDuration);
   }
 
-  private handleAuthentication(email: string, userId: string, token: string, expiresIn: number) {
+  private handleAuthentication(
+    email: string, userId: string, token: string, expiresIn: number
+  ) {
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
     const user = new User(
       email,

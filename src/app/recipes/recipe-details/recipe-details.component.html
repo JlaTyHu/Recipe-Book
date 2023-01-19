@@ -4,7 +4,8 @@
       [src]="recipe.imagePath"
       [alt]="recipe.name"
       class="img-responsive"
-      [ngStyle]="{maxHeight: '300px'}">
+      [ngStyle]="{maxHeight: '300px'}"
+    >
   </div>
 </div>
 
@@ -22,10 +23,19 @@
         class="btn btn-primary dropdown-toggle">
         Manage Recipe <span class="caret"></span>
       </button>
+
       <ul class="dropdown-menu">
-        <li><a (click)="onAddToShoppingList()" style="cursor: pointer">To Shopping List</a></li>
-        <li><a style="cursor: pointer" (click)="onEditRecipe()">Edite Recipe </a></li>
-        <li><a style="cursor: pointer" (click)="onDeleteRecipe()">Delete Recipe</a></li>
+        <li>
+          <a (click)="onAddToShoppingList()" style="cursor: pointer">To Shopping List</a>
+        </li>
+
+        <li>
+          <a style="cursor: pointer" (click)="onEditRecipe()">Edite Recipe </a>
+        </li>
+
+        <li>
+          <a style="cursor: pointer" (click)="onDeleteRecipe()">Delete Recipe</a>
+        </li>
       </ul>
     </div>
   </div>

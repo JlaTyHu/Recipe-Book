@@ -1,24 +1,21 @@
-import {Component, OnDestroy, ViewChild} from "@angular/core";
-import {NgForm} from "@angular/forms";
-
-import {AuthResponseData, AuthService} from "./auth.service";
-
-import {Observable} from "rxjs";
-import {Router} from "@angular/router";
+import { Component, ViewChild } from "@angular/core";
+import { NgForm } from "@angular/forms";
+import { AuthResponseData, AuthService } from "./auth.service";
+import { Observable } from "rxjs";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html'
 })
-export class AuthComponent implements OnDestroy {
+export class AuthComponent {
   @ViewChild('authForm') authForm: NgForm;
   isLoginMode = true;
   isLoading = false;
   error = null;
 
   constructor(private authService: AuthService,
-              private router: Router) {
-  }
+              private router: Router) {}
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
@@ -53,8 +50,5 @@ export class AuthComponent implements OnDestroy {
       });
 
     this.authForm.reset();
-  }
-
-  ngOnDestroy() {
   }
 }
