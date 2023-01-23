@@ -1,4 +1,54 @@
-input.ng-invalid.ng-touched,
-textarea.ng-invalid.ng-touched {
-  border: 1px solid red;
+.edit-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.filed-full-width {
+  width: 100%;
+}
+
+.edit-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  button {
+    width: 45%;
+    min-height: 50px;
+  }
+}
+
+.mdc-button {
+  background: #802BB1;
+  color: #D1D7E0;
+}
+
+.mat-mdc-raised-button:disabled {
+  background: rgba(128, 43, 177, 0.25);
+}
+
+.field-btn {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    min-height: 56px;
+  }
+}
+
+.control-ingredients {
+  flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 408px) {
+  .btn-media-control {
+    width: 100%!important;
+  }
+
+  .amount-media {
+    min-width: 105px!important;
+  }
 }

@@ -5,6 +5,8 @@ import { AlertComponent } from "./alert/alert.component";
 import { LoadingSpinnerComponent } from "./loading-spinner/loading-spinner.component";
 import { PlaceholderDirective } from "./placeholder/placeholder.directive";
 import { DropdownDirective } from "./dropdown.directive";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { DropdownDirective } from "./dropdown.directive";
     DropdownDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   exports: [
     AlertComponent,

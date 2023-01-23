@@ -1,6 +1,12 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatCardModule } from "@angular/material/card";
+import { MatListModule } from "@angular/material/list";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatInputModule } from "@angular/material/input";
+import { MatButtonModule } from "@angular/material/button";
+import { MatGridListModule } from "@angular/material/grid-list";
 
 import { RecipesComponent } from "./recipes.component";
 import { RecipeListComponent } from "./recipe-list/recipe-list.component";
@@ -20,12 +26,18 @@ import { SharedModule } from "../shared/shared.module";
     RecipeStartComponent,
     RecipeEditComponent
   ],
-  imports: [
-    RouterModule,
-    ReactiveFormsModule,
-    RecipesRoutingModule,
-    SharedModule
-  ]
+    imports: [
+        RouterModule,
+        ReactiveFormsModule,
+        RecipesRoutingModule,
+        SharedModule,
+        MatCardModule,
+        MatListModule,
+        MatMenuModule,
+        MatInputModule,
+        MatButtonModule,
+        MatGridListModule
+    ]
 })
 export class RecipesModule {
 }

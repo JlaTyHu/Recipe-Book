@@ -18,11 +18,12 @@
   background: rgba(128, 43, 177, 0.25);
 }
 
-.btn-space {
+.auth-btn {
   display: flex;
   justify-content: space-between;
 
   button {
-    width: 30%;
+    width: 45%;
+    min-height: 50px;
   }
 }

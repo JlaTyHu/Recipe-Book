@@ -1,0 +1,15 @@
+.mdc-button {
+  background: #802BB1;
+  color: #D1D7E0;
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  button {
+    width: 45%;
+    min-height: 50px;
+  }
+}

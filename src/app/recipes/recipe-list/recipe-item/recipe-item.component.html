@@ -1,26 +1,12 @@
-<a
-  style="cursor: pointer"
-  [routerLink]="[index]"
-  routerLinkActive="active"
-  class="list-group-item clearfix"
->
-  <div class="pull-left">
-    <h4 class="list-group-item-heading">
-      {{ recipe.name }}
-    </h4>
-    <p class="list-group-item-text">
-      {{ recipe.description }}
-    </p>
-  </div>
-  <span class="pull-right">
-    <img
-      [src]="recipe.imagePath"
-      alt="{{ recipe.name }}"
-      class="img-responsive"
-      [ngStyle]="{
-        'max-height': '50px',
-         'max-width': '50px;'
-      }"
-    >
-  </span>
-</a>
+<mat-card class="example-card" [routerLink]="[index]">
+  <mat-card-header>
+    <mat-card-title-group style="flex-wrap: wrap">
+      <mat-card-title>{{ recipe.name }}</mat-card-title>
+      <mat-card-subtitle>Recipe</mat-card-subtitle>
+      <img mat-card-sm-image [src]="recipe.imagePath" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content style="padding-top: 10px">
+    {{ recipe.description }}
+  </mat-card-content>
+</mat-card>
