@@ -26,7 +26,8 @@ export class AuthComponent implements OnInit, OnDestroy {
 
   constructor(
     private dialog: MatDialog,
-    private store: Store<fromApp.AppState>) {}
+    private store: Store<fromApp.AppState>
+    ) {}
 
   ngOnInit() {
     this.storeSub = this.store.select('auth').subscribe(authState => {
@@ -63,7 +64,6 @@ export class AuthComponent implements OnInit, OnDestroy {
         })
       );
     }
-
     this.authForm.reset();
   }
 

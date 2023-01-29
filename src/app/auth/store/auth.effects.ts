@@ -35,7 +35,7 @@ const handleAuthentication = (
     userId: userId,
     token: token,
     expirationDate: expirationDate,
-    redirect: false
+    redirect: true
   });
 };
 const handleError = (errorRes: any) => {
@@ -151,7 +151,7 @@ export class AuthEffects {
             _tokenExpirationDate: string;
           } = JSON.parse(localStorage.getItem('userData'));
           if (!userData) {
-            return { type: 'DUMMY' };
+            return { type: 'DUMMY1' };
           }
 
           const loadedUser = new User(
@@ -173,7 +173,7 @@ export class AuthEffects {
             });
           }
 
-          return { type: 'DUMMY' };
+          return { type: 'DUMMY2' };
         })
       )
     }
@@ -186,7 +186,7 @@ export class AuthEffects {
         tap(() => {
           this.authService.clearLogoutTimer();
           localStorage.removeItem('userData');
-          this.router.navigate(['/auth']);
+          this.router.navigate(['/authenticate']);
         })
       )
     },
