@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-course-recipe-bo-34bdb": {
+      "hosting": {
+        "my-correctly-app": [
+          "angular-course-recipe-bo-34bdb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-course-recipe-bo-34bdb"
+  }
+}

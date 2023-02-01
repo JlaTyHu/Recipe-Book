@@ -40,8 +40,33 @@
 
 .control-ingredients {
   flex-wrap: wrap;
+  padding: 10px 0;
+  border-bottom: 3px solid #D1D7E0;
 }
 
+.close-ing-btn {
+  background: #D2042D;
+}
+
+@media screen and (max-width: 409px){
+  .close-ing-btn {
+    width: 100%!important;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 495px) and (max-width: 624px) {
+  .close-ing-btn {
+    width: 100%!important;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 409px) and (max-width: 496px){
+  .btn-ing-name {
+    width: 100%!important;
+  }
+}
 
 @media screen and (max-width: 408px) {
   .btn-media-control {

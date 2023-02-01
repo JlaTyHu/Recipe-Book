@@ -44,3 +44,8 @@ Thumbs.db
 # Project components/elements
 ./node_modules
 ./src/app/temp-directory
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

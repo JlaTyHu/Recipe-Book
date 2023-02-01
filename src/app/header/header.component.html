@@ -1,19 +1,21 @@
 <mat-toolbar>
-  <button mat-button routerLink="/" class="logo">Recipe Book</button>
+  <button mat-button routerLink="/" class="logo media-font">Recipe Book</button>
 
   <div *ngIf="isAuthenticated">
-    <button mat-button routerLink="/recipes">Recipes</button>
-    <button mat-button routerLink="/shopping-list">Shopping List</button>
+    <button mat-button routerLink="/recipes" class="media-font">Recipes</button>
+    <button mat-button routerLink="/shopping-list" class="media-font">Shopping List</button>
   </div>
 
   <span class="spacer"></span>
 
   <button
+    class="media-font"
     mat-button
     routerLink="/authenticate"
     *ngIf="!isAuthenticated"
   >Authenticate</button>
   <button
+    class="media-font"
     mat-button
     routerLink="/authenticate"
     *ngIf="isAuthenticated"

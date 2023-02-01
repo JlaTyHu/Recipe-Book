@@ -99,6 +99,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "my-correctly-app:build:production",
+            "firebaseProject": "angular-course-recipe-bo-34bdb",
+            "firebaseHostingSite": "angular-course-recipe-bo-34bdb"
+          }
         }
       }
     }
